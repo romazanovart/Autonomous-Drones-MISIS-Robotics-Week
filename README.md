@@ -19,11 +19,11 @@
 2. _ai_node.py_ — Узел нейросетевой детекции объектов. Узел использует модель YOLOv8 для поиска объектов, анализируя кадр в четырех ориентациях (0°–270°) для компенсации крена дрона. После фильтрации дубликатов алгоритмом NMS данные о целях передаются в JSON-формате через топик _/drone/detection_data_, а снимки сохраняются в папку _detections_.
 3. _aruco_ai_code.py_ — Узел навигации по маркерам. Компонент вычисляет 3D-дистанцию и вектор направления до ArUco-маркеров размером 5 см методом SolvePnP. Координаты смещения и расстояние публикуются в топик _aruco/vector_data_, а для отладки формируется изображение с осями координат в топике _aruco/debug_image_.
 
-## Определения обьектов
+### Определения обьектов _/ros2_camera_code/ai_node.py_
 
 <img width="713" height="483" alt="rounded-in-photoretrica" src="https://github.com/user-attachments/assets/109e98a2-48ba-498d-8527-dac8aa6b07c6" />
 
-## Определение ArUco-маркеры
+### Определение ArUco-маркеры _/ros2_camera_code/aruco_ai_code.py_
 
 <img width="500" height="500" alt="photo_2026-02-19_10-46-17-round-corners" src="https://github.com/user-attachments/assets/640fec59-8afd-4f2e-9b0f-d3ff21290376" />
 
